@@ -6,9 +6,7 @@
         <title>ESP32 OV2460</title>
         <style>
             body {
-                font-family: Arial,Helvetica,sans-serif;
-                background: #181818;
-                color: #EFEFEF;
+                font-family: -apple-system, "Segoe UI", "Helvetica Neue", "Hiragino Kaku Gothic ProN", メイリオ, meiryo, sans-serif;
                 font-size: 16px
             }
 
@@ -28,7 +26,8 @@
                 display: none;
                 flex-wrap: nowrap;
                 min-width: 340px;
-                background: #363636;
+                color:white;
+                background: #64c500;
                 padding: 8px;
                 border-radius: 4px;
                 margin-top: -10px;
@@ -143,7 +142,7 @@
                 line-height: 28px;
                 cursor: pointer;
                 color: #fff;
-                background: #ff3034;
+                background: #4a9200;
                 border-radius: 5px;
                 font-size: 16px;
                 outline: 0
@@ -166,7 +165,7 @@
                 -webkit-appearance: none;
                 width: 100%;
                 height: 22px;
-                background: #363636;
+                background: #64c500;
                 cursor: pointer;
                 margin: 0
             }
@@ -189,7 +188,7 @@
                 height: 22px;
                 width: 22px;
                 border-radius: 50px;
-                background: #ff3034;
+                background: #4a9200;
                 cursor: pointer;
                 -webkit-appearance: none;
                 margin-top: -11.5px
@@ -213,7 +212,7 @@
                 height: 22px;
                 width: 22px;
                 border-radius: 50px;
-                background: #ff3034;
+                background: #4a9200;
                 cursor: pointer
             }
 
@@ -243,7 +242,7 @@
                 height: 22px;
                 width: 22px;
                 border-radius: 50px;
-                background: #ff3034;
+                background: #4a9200;
                 cursor: pointer;
                 height: 2px
             }
@@ -253,7 +252,7 @@
             }
 
             input[type=range]:focus::-ms-fill-upper {
-                background: #363636
+                background: #64c500
             }
 
             .switch {
@@ -296,7 +295,7 @@
             }
 
             input:checked+.slider {
-                background-color: #ff3034
+                background-color: #4a9200
             }
 
             input:checked+.slider:before {
@@ -305,7 +304,7 @@
             }
 
             select {
-                border: 1px solid #363636;
+                border: 1px solid #64c500;
                 font-size: 14px;
                 height: 22px;
                 outline: 0;
@@ -321,7 +320,7 @@
                 position: absolute;
                 right: 5px;
                 top: 5px;
-                background: #ff3034;
+                background: #4a9200;
                 width: 16px;
                 height: 16px;
                 border-radius: 100px;
@@ -339,14 +338,14 @@
     <body>
         <section class="main">
             <div id="logo">
-                <label for="nav-toggle-cb" id="nav-toggle">&#9776;&nbsp;&nbsp;Toggle OV2640 settings</label>
+                <label for="nav-toggle-cb" id="nav-toggle">&#9776;&nbsp;&nbsp;OV2640設定 表示切替</label>
             </div>
             <div id="content">
                 <div id="sidebar">
                     <input type="checkbox" id="nav-toggle-cb" checked="checked">
                     <nav id="menu">
                         <div class="input-group" id="framesize-group">
-                            <label for="framesize">Resolution</label>
+                            <label for="framesize">解像度</label>
                             <select id="framesize" class="default-action">
                                 <option value="10">UXGA(1600x1200)</option>
                                 <option value="9">SXGA(1280x1024)</option>
@@ -360,39 +359,39 @@
                             </select>
                         </div>
                         <div class="input-group" id="quality-group">
-                            <label for="quality">Quality</label>
+                            <label for="quality">画質</label>
                             <div class="range-min">10</div>
                             <input type="range" id="quality" min="10" max="63" value="10" class="default-action">
                             <div class="range-max">63</div>
                         </div>
                         <div class="input-group" id="brightness-group">
-                            <label for="brightness">Brightness</label>
+                            <label for="brightness">輝度</label>
                             <div class="range-min">-2</div>
                             <input type="range" id="brightness" min="-2" max="2" value="0" class="default-action">
                             <div class="range-max">2</div>
                         </div>
                         <div class="input-group" id="contrast-group">
-                            <label for="contrast">Contrast</label>
+                            <label for="contrast">コントラスト</label>
                             <div class="range-min">-2</div>
                             <input type="range" id="contrast" min="-2" max="2" value="0" class="default-action">
                             <div class="range-max">2</div>
                         </div>
                         <div class="input-group" id="saturation-group">
-                            <label for="saturation">Saturation</label>
+                            <label for="saturation">彩度</label>
                             <div class="range-min">-2</div>
                             <input type="range" id="saturation" min="-2" max="2" value="0" class="default-action">
                             <div class="range-max">2</div>
                         </div>
                         <div class="input-group" id="special_effect-group">
-                            <label for="special_effect">Special Effect</label>
+                            <label for="special_effect">エフェクト</label>
                             <select id="special_effect" class="default-action">
-                                <option value="0" selected="selected">No Effect</option>
-                                <option value="1">Negative</option>
-                                <option value="2">Grayscale</option>
-                                <option value="3">Red Tint</option>
-                                <option value="4">Green Tint</option>
-                                <option value="5">Blue Tint</option>
-                                <option value="6">Sepia</option>
+                                <option value="0" selected="selected">効果なし</option>
+                                <option value="1">ネガ</option>
+                                <option value="2">グレースケール</option>
+                                <option value="3">赤</option>
+                                <option value="4">緑</option>
+                                <option value="5">青</option>
+                                <option value="6">セピア</option>
                             </select>
                         </div>
                         <div class="input-group" id="awb-group">
@@ -403,141 +402,141 @@
                             </div>
                         </div>
                         <div class="input-group" id="awb_gain-group">
-                            <label for="awb_gain">AWB Gain</label>
+                            <label for="awb_gain">AWBゲイン</label>
                             <div class="switch">
                                 <input id="awb_gain" type="checkbox" class="default-action" checked="checked">
                                 <label class="slider" for="awb_gain"></label>
                             </div>
                         </div>
                         <div class="input-group" id="wb_mode-group">
-                            <label for="wb_mode">WB Mode</label>
+                            <label for="wb_mode">WBモード</label>
                             <select id="wb_mode" class="default-action">
-                                <option value="0" selected="selected">Auto</option>
-                                <option value="1">Sunny</option>
-                                <option value="2">Cloudy</option>
-                                <option value="3">Office</option>
-                                <option value="4">Home</option>
+                                <option value="0" selected="selected">自動</option>
+                                <option value="1">晴れ</option>
+                                <option value="2">曇り</option>
+                                <option value="3">屋内（蛍光灯）</option>
+                                <option value="4">屋内（白熱球）</option>
                             </select>
                         </div>
                         <div class="input-group" id="aec-group">
-                            <label for="aec">AEC SENSOR</label>
+                            <label for="aec">AE</label>
                             <div class="switch">
                                 <input id="aec" type="checkbox" class="default-action" checked="checked">
                                 <label class="slider" for="aec"></label>
                             </div>
                         </div>
                         <div class="input-group" id="aec2-group">
-                            <label for="aec2">AEC DSP</label>
+                            <label for="aec2">AEモニター反映</label>
                             <div class="switch">
                                 <input id="aec2" type="checkbox" class="default-action" checked="checked">
                                 <label class="slider" for="aec2"></label>
                             </div>
                         </div>
                         <div class="input-group" id="ae_level-group">
-                            <label for="ae_level">AE Level</label>
+                            <label for="ae_level">露出補正</label>
                             <div class="range-min">-2</div>
                             <input type="range" id="ae_level" min="-2" max="2" value="0" class="default-action">
                             <div class="range-max">2</div>
                         </div>
                         <div class="input-group" id="aec_value-group">
-                            <label for="aec_value">Exposure</label>
+                            <label for="aec_value">マニュアル露出</label>
                             <div class="range-min">0</div>
                             <input type="range" id="aec_value" min="0" max="1200" value="204" class="default-action">
                             <div class="range-max">1200</div>
                         </div>
                         <div class="input-group" id="agc-group">
-                            <label for="agc">AGC</label>
+                            <label for="agc">オートISO</label>
                             <div class="switch">
                                 <input id="agc" type="checkbox" class="default-action" checked="checked">
                                 <label class="slider" for="agc"></label>
                             </div>
                         </div>
                         <div class="input-group hidden" id="agc_gain-group">
-                            <label for="agc_gain">Gain</label>
+                            <label for="agc_gain">マニュアルISO</label>
                             <div class="range-min">1x</div>
                             <input type="range" id="agc_gain" min="0" max="30" value="5" class="default-action">
                             <div class="range-max">31x</div>
                         </div>
                         <div class="input-group" id="gainceiling-group">
-                            <label for="gainceiling">Gain Ceiling</label>
+                            <label for="gainceiling">オートISO上限</label>
                             <div class="range-min">2x</div>
                             <input type="range" id="gainceiling" min="0" max="6" value="0" class="default-action">
                             <div class="range-max">128x</div>
                         </div>
                         <div class="input-group" id="bpc-group">
-                            <label for="bpc">BPC</label>
+                            <label for="bpc">黒レベル補正</label>
                             <div class="switch">
                                 <input id="bpc" type="checkbox" class="default-action">
                                 <label class="slider" for="bpc"></label>
                             </div>
                         </div>
                         <div class="input-group" id="wpc-group">
-                            <label for="wpc">WPC</label>
+                            <label for="wpc">白レベル補正</label>
                             <div class="switch">
                                 <input id="wpc" type="checkbox" class="default-action" checked="checked">
                                 <label class="slider" for="wpc"></label>
                             </div>
                         </div>
                         <div class="input-group" id="raw_gma-group">
-                            <label for="raw_gma">Raw GMA</label>
+                            <label for="raw_gma">ガンマ補正</label>
                             <div class="switch">
                                 <input id="raw_gma" type="checkbox" class="default-action" checked="checked">
                                 <label class="slider" for="raw_gma"></label>
                             </div>
                         </div>
                         <div class="input-group" id="lenc-group">
-                            <label for="lenc">Lens Correction</label>
+                            <label for="lenc">レンズ補正</label>
                             <div class="switch">
                                 <input id="lenc" type="checkbox" class="default-action" checked="checked">
                                 <label class="slider" for="lenc"></label>
                             </div>
                         </div>
                         <div class="input-group" id="hmirror-group">
-                            <label for="hmirror">H-Mirror</label>
+                            <label for="hmirror">水平反転</label>
                             <div class="switch">
                                 <input id="hmirror" type="checkbox" class="default-action" checked="checked">
                                 <label class="slider" for="hmirror"></label>
                             </div>
                         </div>
                         <div class="input-group" id="vflip-group">
-                            <label for="vflip">V-Flip</label>
+                            <label for="vflip">垂直反転</label>
                             <div class="switch">
                                 <input id="vflip" type="checkbox" class="default-action" checked="checked">
                                 <label class="slider" for="vflip"></label>
                             </div>
                         </div>
                         <div class="input-group" id="dcw-group">
-                            <label for="dcw">DCW (Downsize EN)</label>
+                            <label for="dcw">画像縮小</label>
                             <div class="switch">
                                 <input id="dcw" type="checkbox" class="default-action" checked="checked">
                                 <label class="slider" for="dcw"></label>
                             </div>
                         </div>
                         <div class="input-group" id="colorbar-group">
-                            <label for="colorbar">Color Bar</label>
+                            <label for="colorbar">カラーバー</label>
                             <div class="switch">
                                 <input id="colorbar" type="checkbox" class="default-action">
                                 <label class="slider" for="colorbar"></label>
                             </div>
                         </div>
                         <div class="input-group" id="face_detect-group">
-                            <label for="face_detect">Face Detection</label>
+                            <label for="face_detect">顔検出</label>
                             <div class="switch">
                                 <input id="face_detect" type="checkbox" class="default-action">
                                 <label class="slider" for="face_detect"></label>
                             </div>
                         </div>
                         <div class="input-group" id="face_recognize-group">
-                            <label for="face_recognize">Face Recognition</label>
+                            <label for="face_recognize">顔認識</label>
                             <div class="switch">
                                 <input id="face_recognize" type="checkbox" class="default-action">
                                 <label class="slider" for="face_recognize"></label>
                             </div>
                         </div>
                         <section id="buttons">
-                            <button id="get-still">Get Still</button>
-                            <button id="toggle-stream">Start Stream</button>
-                            <button id="face_enroll" class="disabled" disabled="disabled">Enroll Face</button>
+                            <button id="get-still">写真撮影</button>
+                            <button id="toggle-stream">動画再生</button>
+                            <button id="face_enroll" class="disabled" disabled="disabled">顔登録</button>
                         </section>
                     </nav>
                 </div>
@@ -748,7 +747,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
   detect.onchange = () => {
     if (framesize.value > 5) {
-      alert("Please select CIF or lower resolution before enabling this feature!");
+      alert("Please select CIF or lower 解像度 before enabling this feature!");
       updateValue(detect, false)
       return;
     }
@@ -761,7 +760,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
   recognize.onchange = () => {
     if (framesize.value > 5) {
-      alert("Please select CIF or lower resolution before enabling this feature!");
+      alert("Please select CIF or lower 解像度 before enabling this feature!");
       updateValue(recognize, false)
       return;
     }
